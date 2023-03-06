@@ -22,4 +22,4 @@ Weather forecast detects weather in your current location manually. There are ma
 
 ---
 
-You can check out for [live preview](https://mostafaismaiel.github.io/forecast-weather-app/)
+You can check out for [live preview](https://forecaste-app.vercel.app/)
