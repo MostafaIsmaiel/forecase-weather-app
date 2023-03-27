@@ -1,17 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 /* Variables */
 :root {
   --main-color: #c4c3c6;
   --secondery-color: #ffffff;
   --font-color: #1a1a1a;
-  --error-background-color: #FFF3CD;
-  --error-color: #A56404;
+  --error-background-color: #fff3cd;
+  --error-color: #a56404;
   --main-background-color: #d6d7db;
   --background-color: #f7f6f9;
   --button-color: #c4c3c6;
-  --gradient-toTop: linear-gradient(to top, #ffffff, #fdfdfe, #fbfbfc, #f9f8fb, #f7f6f9);
-  --gradient-toBottom: linear-gradient(to bottom, #ffffff, #fdfdfe, #fbfbfc, #f9f8fb, #f7f6f9);
+  --gradient-toTop: linear-gradient(
+    to top,
+    #ffffff,
+    #fdfdfe,
+    #fbfbfc,
+    #f9f8fb,
+    #f7f6f9
+  );
+  --gradient-toBottom: linear-gradient(
+    to bottom,
+    #ffffff,
+    #fdfdfe,
+    #fbfbfc,
+    #f9f8fb,
+    #f7f6f9
+  );
   --main-border-radius: 3rem;
   --medium-border-radius: 1rem;
   --main-padding: 3rem 2rem;
@@ -38,8 +52,22 @@
   --font-color: hsl(30, 25%, 89%);
   --button-color: hsl(221, 14%, 31%);
   --background-color: hsl(223, 31%, 20%);
-  --gradient-toTop: linear-gradient(to top, #182034, #1b2338, #1d263b, #20293f, #232c43);
-  --gradient-toBottom: linear-gradient(to bottom, #182034, #1b2338, #1d263b, #20293f, #232c43);
+  --gradient-toTop: linear-gradient(
+    to top,
+    #182034,
+    #1b2338,
+    #1d263b,
+    #20293f,
+    #232c43
+  );
+  --gradient-toBottom: linear-gradient(
+    to bottom,
+    #182034,
+    #1b2338,
+    #1d263b,
+    #20293f,
+    #232c43
+  );
 }
 
 * {
@@ -48,14 +76,12 @@
   box-sizing: border-box;
   text-transform: capitalize;
   transition: var(--transition);
-
+  -webkit-tap-highlight-color: transparent;
 }
-
 
 body {
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", sans-serif;
 }
-
 
 // ANCHOR Error & Navigator Section
 .error,
@@ -91,7 +117,7 @@ body {
   align-items: center;
 
   // ANCHOR Firs view section
-  >.first-view {
+  > .first-view {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -156,7 +182,6 @@ body {
     overflow: hidden;
     animation: fromTop 0.3s ease-in-out;
 
-
     //ANCHOR Loading container
 
     .loading-container {
@@ -176,7 +201,6 @@ body {
       }
     }
 
-
     // ANCHOR Today section
 
     .today {
@@ -185,7 +209,6 @@ body {
       display: grid;
       grid-template-rows: auto 1fr auto;
       gap: 40px;
-
 
       //ANCHOR Search box
       .first-view {
@@ -203,7 +226,6 @@ body {
           align-items: center;
           color: var(--font-color);
           display: flex;
-
 
           .search {
             background-color: transparent;
@@ -240,7 +262,6 @@ body {
         }
       }
 
-
       // ANCHOR Today's forecast section
 
       .today-weather {
@@ -262,7 +283,6 @@ body {
             justify-content: center;
             color: var(--font-color);
             font-size: var(--main-font-size);
-
           }
         }
 
@@ -278,7 +298,6 @@ body {
           .date {
             color: var(--font-color);
             font-weight: 450;
-
           }
 
           .time {
@@ -286,7 +305,6 @@ body {
             color: var(--main-color);
             font-size: var(--xSmall-font-size);
             font-weight: 450;
-
           }
         }
 
@@ -331,7 +349,6 @@ body {
           }
         }
       }
-
     }
 
     // ANCHOR Forecast section
@@ -340,7 +357,6 @@ body {
       width: 100%;
       height: 100%;
       padding: 1.5rem;
-
 
       .header {
         display: flex;
@@ -375,11 +391,9 @@ body {
             z-index: 100;
             transition: 0.5s ease-in-out;
           }
-
         }
 
         .toggle-mode.active {
-
           &::after {
             background-image: url("./assest/moon.png");
             left: 60%;
@@ -451,7 +465,6 @@ body {
             justify-content: space-evenly;
             align-items: center;
 
-
             .min {
               color: var(--main-color);
             }
@@ -466,11 +479,9 @@ body {
 
         .headTitle {
           font-size: calc(var(--main-font-size) / 1.5);
-
         }
 
         .weather-container {
-
           .right-arrow,
           .left-arrow {
             display: none;
@@ -645,12 +656,9 @@ body {
   }
 }
 
-
-
 //ANCHOR Media query
 
-@media (max-width : 810px) {
-
+@media (max-width: 810px) {
   // ANCHOR Error Section
   .error,
   .navigator {
@@ -665,7 +673,7 @@ body {
   .main-container {
     padding: 10% 20px;
 
-    >.first-view {
+    > .first-view {
       width: unset;
     }
 
@@ -675,7 +683,6 @@ body {
       //ANCHOR Loading container
 
       .loading-container {
-
         .loader {
           img {
             width: 150px;
@@ -746,7 +753,6 @@ body {
 
       // ANCHOR Forecast section
 
-
       .forecast {
         padding: var(--medium-padding);
         background-image: var(--gradient-toTop);
@@ -771,13 +777,11 @@ body {
             padding: 15px;
             font-size: var(--xSmall-font-size);
           }
-
         }
 
         .today-highlights {
           width: 100%;
           position: relative;
-
 
           // ANCHOR Today's Highlight
 
@@ -856,8 +860,7 @@ body {
   }
 }
 
-@media (max-width : 450px) {
-
+@media (max-width: 450px) {
   .error,
   .navigator {
     font-size: var(--xxSmall-font-size);
@@ -886,7 +889,6 @@ body {
                 width: var(--small-icon-width);
               }
             }
-
           }
 
           .current-location {

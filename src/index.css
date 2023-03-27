@@ -4,13 +4,27 @@
   --main-color: #c4c3c6;
   --secondery-color: #ffffff;
   --font-color: #1a1a1a;
-  --error-background-color: #FFF3CD;
-  --error-color: #A56404;
+  --error-background-color: #fff3cd;
+  --error-color: #a56404;
   --main-background-color: #d6d7db;
   --background-color: #f7f6f9;
   --button-color: #c4c3c6;
-  --gradient-toTop: linear-gradient(to top, #ffffff, #fdfdfe, #fbfbfc, #f9f8fb, #f7f6f9);
-  --gradient-toBottom: linear-gradient(to bottom, #ffffff, #fdfdfe, #fbfbfc, #f9f8fb, #f7f6f9);
+  --gradient-toTop: linear-gradient(
+    to top,
+    #ffffff,
+    #fdfdfe,
+    #fbfbfc,
+    #f9f8fb,
+    #f7f6f9
+  );
+  --gradient-toBottom: linear-gradient(
+    to bottom,
+    #ffffff,
+    #fdfdfe,
+    #fbfbfc,
+    #f9f8fb,
+    #f7f6f9
+  );
   --main-border-radius: 3rem;
   --medium-border-radius: 1rem;
   --main-padding: 3rem 2rem;
@@ -37,8 +51,22 @@
   --font-color: hsl(30, 25%, 89%);
   --button-color: hsl(221, 14%, 31%);
   --background-color: hsl(223, 31%, 20%);
-  --gradient-toTop: linear-gradient(to top, #182034, #1b2338, #1d263b, #20293f, #232c43);
-  --gradient-toBottom: linear-gradient(to bottom, #182034, #1b2338, #1d263b, #20293f, #232c43);
+  --gradient-toTop: linear-gradient(
+    to top,
+    #182034,
+    #1b2338,
+    #1d263b,
+    #20293f,
+    #232c43
+  );
+  --gradient-toBottom: linear-gradient(
+    to bottom,
+    #182034,
+    #1b2338,
+    #1d263b,
+    #20293f,
+    #232c43
+  );
 }
 
 * {
@@ -47,6 +75,7 @@
   box-sizing: border-box;
   text-transform: capitalize;
   transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -183,7 +212,12 @@ body {
   outline: none;
   color: var(--font-color);
 }
-.main-container .container .today .first-view .search-container .search::placeholder {
+.main-container
+  .container
+  .today
+  .first-view
+  .search-container
+  .search::placeholder {
   color: var(--font-color);
 }
 .main-container .container .today .first-view .search-container .submit {
@@ -191,7 +225,13 @@ body {
   cursor: pointer;
   background: none;
 }
-.main-container .container .today .first-view .search-container .submit .location {
+.main-container
+  .container
+  .today
+  .first-view
+  .search-container
+  .submit
+  .location {
   width: var(--main-icon-width);
 }
 .main-container .container .today .first-view .current-location {
@@ -216,7 +256,12 @@ body {
 .main-container .container .today .today-weather .current .today-status-img {
   max-width: 150px;
 }
-.main-container .container .today .today-weather .current .current-temp-container {
+.main-container
+  .container
+  .today
+  .today-weather
+  .current
+  .current-temp-container {
   display: flex;
   justify-content: center;
   color: var(--font-color);
@@ -259,12 +304,24 @@ body {
   grid-template-columns: auto 1fr;
 }
 .main-container .container .today .today-weather .prediction .air-status h4,
-.main-container .container .today .today-weather .prediction .weather-status h4 {
+.main-container
+  .container
+  .today
+  .today-weather
+  .prediction
+  .weather-status
+  h4 {
   font-weight: 450;
   text-align: center;
 }
 .main-container .container .today .today-weather .prediction .air-status img,
-.main-container .container .today .today-weather .prediction .weather-status img {
+.main-container
+  .container
+  .today
+  .today-weather
+  .prediction
+  .weather-status
+  img {
   max-width: var(--main-icon-width);
 }
 .main-container .container .today .today-weather .search-result {
@@ -383,18 +440,39 @@ body {
 .main-container .container .forecast .today-highlights .headTitle {
   font-size: calc(var(--main-font-size) / 1.5);
 }
-.main-container .container .forecast .today-highlights .weather-container .right-arrow,
-.main-container .container .forecast .today-highlights .weather-container .left-arrow {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .right-arrow,
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .left-arrow {
   display: none;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: var(--gap);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card {
   background-color: var(--secondery-color);
   width: 100%;
   height: 150px;
@@ -402,102 +480,309 @@ body {
   border-radius: var(--medium-border-radius);
   text-align: center;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card .card-container {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card
+  .card-container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card .card-container img {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card
+  .card-container
+  img {
   width: var(--main-icon-width);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card .card-container h2 {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card
+  .card-container
+  h2 {
   font-size: var(--small-font-size);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card .card-container span {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card
+  .card-container
+  span {
   text-transform: none;
   font-weight: 500;
   font-size: var(--small-font-size);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .card .cardHeader {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .card
+  .cardHeader {
   color: var(--main-color);
   font-size: var(--small-font-size);
   margin-bottom: 10px;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .uv .card-container {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .uv
+  .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .uv .card-container .circle {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .uv
+  .card-container
+  .circle {
   width: 50%;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .uv .card-container .circle svg text {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .uv
+  .card-container
+  .circle
+  svg
+  text {
   font-size: var(--main-font-size);
   font-weight: 600;
   fill: var(--font-color);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .wind .wind-speed {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .wind
+  .wind-speed {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(2, auto);
   gap: 0 5px;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .wind .wind-direction {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .wind
+  .wind-direction {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .wind .wind-direction img {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .wind
+  .wind-direction
+  img {
   width: var(--main-icon-width);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .wind .wind-direction h3 {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .wind
+  .wind-direction
+  h3 {
   font-size: var(--medium-font-size);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer {
   grid-template-rows: auto;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container {
   grid-template-rows: auto;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction {
   display: grid;
   grid-template-rows: repeat(2, auto);
   gap: 10px;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .sun {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .sun {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .sun img {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .sun
+  img {
   width: var(--main-icon-width);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .sun .time h2 {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .sun
+  .time
+  h2 {
   margin-left: 5px;
   font-size: var(--xSmall-font-size);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .sun .time h2 span {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .sun
+  .time
+  h2
+  span {
   font-size: var(--small-font-size);
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .rise .imgContainer,
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .sunContainer .card-container .sunAction .set .imgContainer {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .rise
+  .imgContainer,
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .sunContainer
+  .card-container
+  .sunAction
+  .set
+  .imgContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .humidity .card-container,
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .visibility .card-container,
-.main-container .container .forecast .today-highlights .weather-container .weather-cards .gust .card-container {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .humidity
+  .card-container,
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .visibility
+  .card-container,
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .weather-cards
+  .gust
+  .card-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.main-container .container .forecast .today-highlights .weather-container .right-arrow,
-.main-container .container .forecast .today-highlights .weather-container .left-arrow {
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .right-arrow,
+.main-container
+  .container
+  .forecast
+  .today-highlights
+  .weather-container
+  .left-arrow {
   display: none;
 }
 
@@ -513,7 +798,7 @@ body {
 }
 @media (max-width: 810px) {
   .error .errMessage,
-.navigator .errMessage {
+  .navigator .errMessage {
     font-size: var(--xSmall-font-size);
     text-align: center;
   }
@@ -551,7 +836,12 @@ body {
   .main-container .container .today .today-weather .current .today-status-img {
     max-width: 100px;
   }
-  .main-container .container .today .today-weather .current .current-temp-container {
+  .main-container
+    .container
+    .today
+    .today-weather
+    .current
+    .current-temp-container {
     font-size: var(--medium-font-size);
   }
   .main-container .container .today .today-weather .date-container {
@@ -564,7 +854,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .main-container .container .today .today-weather .prediction .air-status,
-.main-container .container .today .today-weather .prediction .weather-status {
+  .main-container .container .today .today-weather .prediction .weather-status {
     justify-items: center;
     justify-self: center;
     grid-template-columns: 1fr;
@@ -607,7 +897,12 @@ body {
     display: flex;
     align-items: center;
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards {
     display: flex;
     align-items: center;
     gap: 0;
@@ -615,30 +910,82 @@ body {
     left: 0;
     transition: left 0.5s cubic-bezier(0, 0.91, 0.19, 1.31);
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card {
     width: var(--slideWidth);
     padding: 5px;
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card .cardHeader {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    .cardHeader {
     font-size: var(--xSmall-font-size);
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card h2 {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    h2 {
     font-size: var(--xSmall-font-size);
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card h2 span {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    h2
+    span {
     font-size: var(--xSmall-font-size) !important;
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card h3 {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    h3 {
     font-size: var(--xSmall-font-size) !important;
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card .card-container {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    .card-container {
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .main-container .container .forecast .today-highlights .weather-container .right-arrow,
-.main-container .container .forecast .today-highlights .weather-container .left-arrow {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .right-arrow,
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .left-arrow {
     display: block;
     position: absolute;
     font-size: var(--main-font-size);
@@ -647,16 +994,26 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
   }
-  .main-container .container .forecast .today-highlights .weather-container .right-arrow {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .right-arrow {
     right: 20%;
   }
-  .main-container .container .forecast .today-highlights .weather-container .left-arrow {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .left-arrow {
     left: 20%;
   }
 }
 @media (max-width: 450px) {
   .error,
-.navigator {
+  .navigator {
     font-size: var(--xxSmall-font-size);
   }
 
@@ -670,7 +1027,13 @@ body {
   .main-container .container .today .first-view .search-container {
     gap: 10px;
   }
-  .main-container .container .today .first-view .search-container .submit .location {
+  .main-container
+    .container
+    .today
+    .first-view
+    .search-container
+    .submit
+    .location {
     width: var(--small-icon-width);
   }
   .main-container .container .today .first-view .current-location img {
@@ -679,10 +1042,22 @@ body {
   .main-container .container .today .today-weather .current .today-status-img {
     max-width: 80px;
   }
-  .main-container .container .today .today-weather .current .current-temp-container .current-temp {
+  .main-container
+    .container
+    .today
+    .today-weather
+    .current
+    .current-temp-container
+    .current-temp {
     font-size: var(--main-font-size);
   }
-  .main-container .container .today .today-weather .current .current-temp-container span {
+  .main-container
+    .container
+    .today
+    .today-weather
+    .current
+    .current-temp-container
+    span {
     font-size: var(--small-font-size);
   }
   .main-container .container .today .today-weather .date-container {
@@ -695,7 +1070,13 @@ body {
     font-size: var(--xxSmall-font-size);
   }
   .main-container .container .today .today-weather .prediction .air-status img,
-.main-container .container .today .today-weather .prediction .weather-status img {
+  .main-container
+    .container
+    .today
+    .today-weather
+    .prediction
+    .weather-status
+    img {
     width: var(--small-icon-width);
   }
   .main-container .container .forecast {
@@ -731,10 +1112,23 @@ body {
   .main-container .container .forecast .today-highlights .weather-container {
     width: var(--small-slide-width);
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card {
     width: var(--small-slide-width);
   }
-  .main-container .container .forecast .today-highlights .weather-container .weather-cards .card .cardHeader {
+  .main-container
+    .container
+    .forecast
+    .today-highlights
+    .weather-container
+    .weather-cards
+    .card
+    .cardHeader {
     font-size: var(--xSmall-font-size) !important;
   }
 }
