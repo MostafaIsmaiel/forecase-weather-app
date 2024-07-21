@@ -1,35 +1,35 @@
-import Today from "./today";
-import NextDays from "./nextDays";
-import TodaysHighlights from "./todayHilights";
-import Header from "./header";
-import Error from "./error";
-import Loading from "./loading";
-import FirstView from "./firstView";
-import { useEffect, useState } from "react";
+import Today from './today';
+import NextDays from './nextDays';
+import TodaysHighlights from './todayHilights';
+import Header from './header';
+import Error from './error';
+import Loading from './loading';
+import FirstView from './firstView';
+import { useEffect, useState } from 'react';
 
 const Container = () => {
   const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
   ];
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState('');
   const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=5`;
 
   const [data, setData] = useState([]);
   const [isC, setIsC] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
   const [isFirstView, setIsFirstView] = useState(true);
-  const [dark, setDark] = useState("");
+  const [dark, setDark] = useState('');
   const [toggle, setToggle] = useState();
-  const [lat, setLat] = useState("");
-  const [lng, setLng] = useState("");
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
 
   const getCurrentPosition = () => {
     if (navigator.geolocation) {
@@ -38,8 +38,8 @@ const Container = () => {
         let lng = pos.coords.longitude;
         setLat(lat);
         setLng(lng);
-        return true;
       });
+      return true;
     } else {
       return false;
     }
@@ -48,6 +48,7 @@ const Container = () => {
   // ANCHOR Fetching location name
   function fetchLocationName(lat, lng) {
     const isLocationValid = getCurrentPosition();
+
     if (isLocationValid) {
       setIsLoading(true);
       setIsFirstView(false);
@@ -59,12 +60,12 @@ const Container = () => {
             if (res.status >= 200 && res.status <= 299) {
               return res.json();
             } else {
-              throw Error("");
+              throw Error('');
             }
           })
           .then((data) => {
             if (data[0].name) {
-              setCity("");
+              setCity('');
               setCity(data[0].name);
             } else {
               setIsFirstView(true);
@@ -73,7 +74,7 @@ const Container = () => {
           .catch(() => {
             setIsFirstView(true);
             setIsLoading(false);
-            setErrorMessage("Some thing went wrong, pleast try again later.");
+            setErrorMessage('Some thing went wrong, pleast try again later.');
             setIsError(true);
             setTimeout(() => {
               setIsError(false);
@@ -82,7 +83,7 @@ const Container = () => {
       } else {
         setIsFirstView(true);
         setIsLoading(false);
-        setErrorMessage("Please enable your location");
+        setErrorMessage('Please enable your location');
         setIsError(true);
         setTimeout(() => {
           setIsError(false);
@@ -97,17 +98,17 @@ const Container = () => {
     setIsLoading(true);
     setIsFirstView(false);
     fetch(url, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "x-rapidapi-key": "d89cc6705emsh6983c89f8aa44bcp1d3cc5jsnaa2af595bf47",
-        "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
+        'x-rapidapi-key': 'd89cc6705emsh6983c89f8aa44bcp1d3cc5jsnaa2af595bf47',
+        'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
       },
     })
       .then((res) => {
         if (res.status >= 200 && res.status <= 299) {
           return res.json();
         } else {
-          throw Error("");
+          throw Error('');
         }
       })
       .then((data) => {
@@ -115,10 +116,10 @@ const Container = () => {
         setIsLoading(false);
         setIsFirstView(false);
         if (data.current.is_day) {
-          setDark("");
+          setDark('');
           setToggle(false);
         } else {
-          setDark("dark");
+          setDark('dark');
           setToggle(true);
         }
       })
@@ -151,7 +152,7 @@ const Container = () => {
       {isError && <Error isError={setIsError} errorMessage={errorMessage} />}
       {/* {isNav && <Navigator setIsNav={setIsNav} navMessage={navMessage} />} */}
 
-      <section className="container">
+      <section className='container'>
         {isLoading && !isFirstView && <Loading />}
 
         {/* ANCHOR Today */}
@@ -169,7 +170,7 @@ const Container = () => {
 
         {/* ANCHOR Week Forecast */}
         {!isLoading && !isFirstView && (
-          <section className="forecast">
+          <section className='forecast'>
             <Header
               isC={setIsC}
               celsius={isC}
