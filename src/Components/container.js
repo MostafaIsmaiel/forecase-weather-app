@@ -54,7 +54,7 @@ const Container = () => {
       setIsFirstView(false);
       if (lat && lng) {
         fetch(
-          `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lng}&limit=5&appid=d4e738da245099affa60b9e7902e2557`
+          `${process.env.REACT_APP_FORCAST_API}?lat=${lat}&lon=${lng}&limit=5&appid=d4e738da245099affa60b9e7902e2557`
         )
           .then((res) => {
             if (res.status >= 200 && res.status <= 299) {
