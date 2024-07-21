@@ -31,7 +31,7 @@ const Container = () => {
   const [lat, setLat] = useState("");
   const [lng, setLng] = useState("");
 
-  const getCurrentPosition = async () => {
+  const getCurrentPosition = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
         let lat = pos.coords.latitude;
@@ -73,7 +73,7 @@ const Container = () => {
           .catch(() => {
             setIsFirstView(true);
             setIsLoading(false);
-            setErrorMessage("Please enable your location");
+            setErrorMessage("Some thing went wrong, pleast try again later.");
             setIsError(true);
             setTimeout(() => {
               setIsError(false);

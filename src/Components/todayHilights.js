@@ -14,7 +14,8 @@ const TodaysHighlights = ({ data }) => {
 
   //ANCHOR Cards loop function
   function cardsLoop() {
-    const cardWidth = cards[0].getBoundingClientRect().width;
+    const cardWidth = cards[0].offsetWidth;
+
     cards.forEach((ele, i) => {
       if (ele.classList.contains("active")) {
         weatherCards.style.left = `${-cardWidth * i}px`;

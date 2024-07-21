@@ -801,15 +801,21 @@ body {
             .weather-cards {
               display: flex;
               align-items: center;
-              gap: 0;
+              gap: 5px;
               position: relative;
               left: 0;
               transition: left 0.5s cubic-bezier(0, 0.91, 0.19, 1.31);
 
               .card {
-                width: var(--slideWidth);
                 padding: 5px;
-
+                width: var(--slideWidth);
+                transform: scale(0.8);
+                opacity: 0.8;
+                transition: 1s;
+                &.active {
+                  transform: scale(1);
+                  opacity: 1;
+                }
                 .cardHeader {
                   font-size: var(--xSmall-font-size);
                 }
